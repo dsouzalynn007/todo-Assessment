@@ -17,9 +17,9 @@ form.addEventListener('submit',e=>{
     newItem.appendChild(deletespan)
     deletespan.appendChild(deleteButton)
 
-    // deleteButton.addEventListener('click',e=>{
-    //     deleteButton.parentElement.parentElement.remove()
-    // })
+    deleteButton.addEventListener('click',e=>{
+        deleteButton.parentElement.parentElement.remove()
+    })
     editDiv.appendChild(newItem)
     let editspan=document.createElement('span')
     let editButton=document.createElement('button')
