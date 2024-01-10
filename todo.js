@@ -4,7 +4,10 @@ let input=document.querySelector('input')
 let addDiv=document.querySelector('#addDiv')
 let addButton=document.querySelector('#addButton')
 
+document.querySelector('#display').style.display='none'
+
 form.addEventListener('submit',e=>{
+    document.querySelector('#display').style.display='block'
 if(input.value==''){
     errorMessage.textContent='* Cannot add empty input *'
     input.placeholder=''
@@ -31,7 +34,6 @@ else{
         e.preventDefault()
         deleteButton.parentElement.parentElement.remove()
     })
-
     let editspan=document.createElement('span')
     let editButton=document.createElement('button')
     editButton.textContent='edit'
